@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+/* nice scroll bar */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f5f5f5;
+    border-radius: 50px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #000;
+    border-radius: 50px;
+  }
+.button{
+    width: 150px;
+    padding: 15px 0;
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid #000000;
+    background: transparent;
+    /*float: right;*/
+    color: #000;
+    cursor: pointer;
+    transition: .5s;
+    border-radius: 40px;
+}
+.button:hover{
+    background: rgba(255, 160, 160, 0.653);
+    color: #000;
+}
+.Home_header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.4),rgba(4,9,30,0.4)),url(images/bg2.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.logo{
+    font-size: 50px;
+    color: #fff;
+    user-select: none;     
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+.navigation{
+    flex: 1;
+    text-align: right;
+}
+.navigation ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 10px 30px;
+    position: relative;
+}
+.navigation ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 400;
+}
+.navigation ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #ffffff;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.navigation ul li:hover::after{
+    width: 100%;
+}
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 62px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+}
+nav .fa{
+    display: none;
+}
+@media(max-width:700px){
+    .text-box h1{
+      font-size: 20px;
+    }
+    .navigation ul li{
+      display: block;     
+    }
+    .navigation{
+      position: absolute;
+      background: #ffbe46be;
+      height: 100vh;
+      width: 250px;
+      top: 0;
+      right: -250px;
+      text-align: left;
+      z-index: 2;
+      transition: 1s;
+    }
+    nav .fa{
+      display: block;
+      color: #fff;
+      margin: 10px;
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    .navigation ul{
+      padding: 30px;
+    }
+}
+/*--------------------------*/
+.AboutUs_home{
+    
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;  
+    background: #e1e1da;
+}
+h1{
+    font-size: 40px;
+    font-weight: 700;
+}
+p{
+    color: #06011b;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+
+}
+
+.AboutUs_home-row{
+   
+    margin-top: 5%;
+    padding-inline: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5%;
+}
+
+.AboutUs_home-col{
+    flex-basis: 48%;
+    /* background: #ffce74; */
+    border-radius: 10px;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    transition: .5s;
+    margin-inline: 5%;
+}
+.AboutUs_home h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.AboutUs_home-col img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover; 
+}
+.AboutUs_home-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.3);
+}
+@media(max-width: 700px){
+    .AboutUs_home-row{
+        flex-direction: column;
+    }
+}
+
+/*----------------------------------_*/
+.Model_home{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+    background: #e1e1da;
+
+}
+.Model_home .container{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+   
+    background: #e1e1da;
+
+}
+.Model_home-col{
+    flex-basis: 48%;
+    border-radius: 20px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.Model_home-col img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover; 
+}
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 1s;       
+}
+.layer:hover{
+    background: rgba(255, 160, 160, 0.653);    
+}
+.layer p{
+    width: 100%;
+    font-weight: 400;
+    color: #27020e;
+    font-size: 20px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 1s;
+}
+.layer h2{
+    width: 100%;
+    font-weight: 600;
+    color: #000000;
+    font-size: 30px;
+    top: 0;
+    left: 0;
+    transform: translateY(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 1s;
+}
+.layer:hover p{
+    bottom: 40%;
+    opacity: 1;
+}
+.layer:hover h2{
+    top: 46%;
+    opacity: 1;
+}
+.Calendar_home{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    align-content: center;
+    padding-top: 50px;
+    
+    /*background: rgba(255,255,218,1);8*/
+    background: #e1e1da;
+}
+.Calendar_home-col {
+    border-radius: 20px;
+    margin-bottom: 200px;
+    position: relative;
+    padding: 30px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center; /* horizontally center the content */
+    align-items: center; /* vertically center the content */
+    text-align: center; 
+}
+
+.Calendar_home-col img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Adjust the widths of the columns */
+.Calendar_home-col:first-child {
+    flex-basis: 65%; /* Adjust the width of the image column */
+}
+
+.Calendar_home-col:last-child {
+    flex-basis: 35%; /* Adjust the width of the text column */
+}
+.Calendar_home .container{
+    padding-right: 100px;
+}
+/* .Calendar_home .button{
+    width: 150px;
+    padding: 15px 0;
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid #000000;
+    background: transparent;
+    /*float: right;*/
+    /* color: #000;
+    cursor: pointer;
+    transition: .5s;
+    border-radius: 40px;
+  }
+  .Calendar_home .button:hover {
+    background: rgba(255, 160, 160, 0.653);
+    color: #000;
+  } */ 
+
+.Model_header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.4),rgba(4,9,30,0.4)),url(images/laptop.webp);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.two_Models{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    align-content: center;
+    padding-top: 50px;
+    
+    /*background: rgba(255,255,218,1);8*/
+    background: #d2d0ff;
+
+}
+.mod1-col {
+    border-radius: 20px;
+    /* margin-bottom: 50px; */
+    position: relative;
+    padding: 30px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center; /* horizontally center the content */
+    align-items: center; /* vertically center the content */
+    text-align: center; 
+}
+.mod1-col img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Adjust the widths of the columns */
+.mod1-col:first-child {
+    flex-basis: 50%; /* Adjust the width of the image column */
+}
+
+.mod1-col:last-child {
+    flex-basis: 40%; /* Adjust the width of the text column */
+}
+
+.model_button{
+    
+        display: inline-block;
+        padding: 10px 20px; /* Adjust padding as needed */
+        background-color: #4CAF50; /* Button background color */
+        color: white; /* Button text color */
+        text-align: center;
+        text-decoration: none;
+        border: none;
+        border-radius: 4px; /* Adjust border radius as needed */
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    .model_button:hover {
+        background-color: rgba(255, 160, 160, 0.653); /* Button background color on hover */
+    }
+.About_header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.4),rgba(4,9,30,0.4)),url(images/ab_bg2.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}

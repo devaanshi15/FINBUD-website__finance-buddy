@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FinBud</title>
+  <link rel="stylesheet" href="static\Home_styles.css">
+  <!--link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css"-->
+  <link rel="stylesheet" href="static\font-awesome-4.7.0\css\font-awesome.min.css">
+</head>
+<body>
+    <section class="Home_header">
+        <nav>
+            <h2 class="logo">Finbud</h2>
+            <div class = "navigation" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/models">Models</a></li>
+                    <li><a href="/calendar">Calendar</a></li>
+                    <li><a href="/about">About Us</a></li>           
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+       </nav>
+    <div class="text-box">
+        <h1> Your Financial Buddy</h1> 
+        <p> Budgeting is just a click away. Save up some fuel for your long trips.<br>To Know More</p>
+    </div>
+    </section> 
+ 
+    
+    <!------ About Us ------>
+    <section class="AboutUs_home">
+        <h1>ABOUT Project</h1>
+        <p> We are a group of BTech 3rd Year student<br></p>
+        <div class="AboutUs_home-row">
+            <div class="AboutUs_home-col">
+                <h3>Your Finance BUDDY</h3>
+                <p>A personal AI Financial Assistant to help you budget your money.<br> utilising the power of artificial intelligence to find how you can spend your money</p>
+                  <!--img src="static/images/All_pg.jpg"-->
+            </div>
+            <div class="AboutUs_home-col">
+                <img src="static\images\ab_bg.jpg">
+                <!-- <h3>WOHOOOOOO!</h3>
+                <p>hsdj falkd fjgjdbvih rglzfjbvl ozdsig zsldfz</p> -->
+            </div>
+        </div>
+        <div style="padding-bottom: 70px;">
+        <button class ="button" onclick="redirectToabout()">See More</button>
+    </div>
+    </section>
+    <!---------MODELS--------->
+    <section class="Model_home">
+        <h1>Models in our Project</h1>
+        <p> We use 2 models to predic your Budget<br></p>
+        
+            <div class="AboutUs_home-row"> <!--Model_home-row-->
+                <div class="Model_home-col">
+                    <a href="/predict">
+                    <img src="static/images/bg2.jpg">
+                    
+                    <div class="layer">
+                        <h2>Linear Regression</h2>
+                        <p>Forming a standard budget</p>
+                    </div>
+                    </a>
+                </div>
+                <div class="Model_home-col">
+                    <a href="/predict_2">
+                    <img src="static/images/table_study.webp">
+                    <div class="layer">
+                        <h2>Random Forest</h2>
+                        <p>Choose What is Important</p>
+                    </div>
+                    </a>
+                </div>
+            
+        </div>
+    </section>
+    <!-------------------Calendar----------------->
+    <section class="Calendar_home">
+            <h1>Your Calendar</h1>
+            <p><br> Manage your Goals<br></p>
+            <div class="container">
+            <div class="AboutUs_home-row">    <!--- Same as aboutus rows-->
+                <div class="Calendar_home-col">
+                    <img src="static/images/Add_calendar.png">
+                </div>
+                <div class="Calendar_home-col">
+                    <div class="text-container">
+                        <h3>Add Goals</h3>
+                        <p>Want to make a trip to Goa or buy a new dress. <br> Keep track of all you desires at one place.<br>Add future goals for which you wish to save and keep yourself motivated.</p>
+                        <button class ="button" onclick="redirectToCalendar()">See More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="static\Home_script.js"></script>
+</body>
+</html>
+    

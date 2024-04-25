@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>FinBud</title>
+      <link rel="stylesheet" href="static\Home_styles.css">
+      <!--link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css"-->
+      <link rel="stylesheet" href="static\font-awesome-4.7.0\css\font-awesome.min.css">
+    <style>
+        .Enter {
+            font-family: Arial, sans-serif;
+            background-color: #b7e4e4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        label {
+            color: #333;
+            font-size: 20px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+    </head>
+    <body>
+        <section class="Home_header">
+            <nav>
+                <h2 class="logo">Finbud</h2>
+                <div class = "navigation" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/models">Models</a></li>
+                        <li><a href="/calendar">Calendar</a></li>
+                        <li><a href="/about">About Us</a></li>           
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+           </nav>
+        <div class="text-box">
+            <h1>Linear Prediction</h1> 
+            <p> Generate a budget distribution for the amount you enter</p>
+        </div>
+        </section> 
+     
+
+<section class="Enter">
+    <form action="/predict" method="post">
+        <label for="budget">Enter Your Budget:</label>
+        <input placeholder="Budget" type="number" name="budget" step="0.01" required>
+        <button type="submit">Calculate</button>
+    </form>
+    </section>
+    <script src="static\Home_script.js"></script>
+</body>
+</html>

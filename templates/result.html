@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinBud</title>
+      <link rel="stylesheet" href="static\Home_styles.css">
+      <!--link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css"-->
+      <link rel="stylesheet" href="static\font-awesome-4.7.0\css\font-awesome.min.css">
+
+    <style>
+        .Show {
+            font-family: Arial, sans-serif;
+            background-color: #b7e4e4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .card h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .card li {
+            margin-bottom: 5px;
+            color: #666;
+        }
+    </style>
+</head>
+    <body>
+        <section class="Home_header">
+            <nav>
+                <h2 class="logo">Finbud</h2>
+                <div class = "navigation" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/models">Models</a></li>
+                        <li><a href="/calendar">Calendar</a></li>
+                        <li><a href="/about">About Us</a></li>           
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+           </nav>
+        <div class="text-box">
+            <h1>Budget Allocation Result</h1> 
+        </div>
+        </section>
+<section class="Show">
+    <div class="container">
+        <h1 style="padding-top: 100px;">Budget Distribution</h1>
+        <!-- <p>Total Predicted Budget: {{ '%.2f' % total_budget }}</p> -->
+        <p>Mean Squared Error: 7.1429358687648506e-12</p>
+
+        <div class="card">
+            <h2>Category-wise Budget</h2>
+            <ul>
+                {% for category, budget in categories_budget.items() %}
+                    <li>{{ category }}: {{ '%.2f' % budget }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    </section>
+    <script src="static\Home_script.js"></script>
+</body>
+</html>
