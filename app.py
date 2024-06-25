@@ -1,5 +1,4 @@
 
-
 from flask import Flask, render_template, request, redirect, url_for
 import pickle
 import numpy as np
@@ -96,4 +95,3 @@ def predict_2():
 #     else:
 #         # Handle the GET request
 #         return render_template('index.html')
-
