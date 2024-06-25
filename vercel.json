@@ -6,5 +6,11 @@
             "use": "@vercel/python",
             "config":{"runtime":"python3.12.3 "}
         }
+    ],
+    "routes": [
+        {
+            "src":"/(.*)",
+            "dest":"/"
+        }
     ]
 }
